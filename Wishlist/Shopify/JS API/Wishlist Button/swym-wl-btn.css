@@ -1,0 +1,120 @@
+/*Theme specific variables*/
+:root {
+    --wl-text-primary: #4e46b4;
+    --wl-text-secondary: #ffffff;
+    --wl-background-primary: #fafaf9;
+    --wl-background-secondary: #4e46b4;
+    --wl-color-white: #fafaf9;
+    --wl-color-black: #222831;
+    --wl-btn-font-size: 1.5rem;
+    --wl-btn-height: 4.5rem;
+    --wl-btn-width: 100%;
+    --wl-btn-max-width: 440px;
+    --wl-toast-top: 50px;
+}
+
+/*CSS for button style*/
+.add-to-wl-btn {
+    min-height: var(--wl-btn-height);
+    width: var(--wl-btn-width);
+    max-width: var(--wl-btn-max-width);
+    font-size: var(--wl-btn-font-size);
+    background: var(--wl-background-primary);
+    color: var(--wl-text-primary);
+    padding: 8px, 16px, 8px, 16px;
+    border-radius: 8px;
+    border: 1.5px solid #4e46b4;
+    opacity: 0.3;
+}
+
+/*CSS for button when clicked*/
+.add-to-wl-btn:active {
+    scale: 0.99;
+    border: 1.75px solid #4e46b4;
+}
+
+/*CSS for button on hover*/
+.add-to-wl-btn:hover {
+    cursor: pointer;
+}
+
+/*CSS for button after adding product to whislist*/
+.added-to-wishlist {
+    background: var(--wl-background-secondary);
+    color: var(--wl-text-secondary);
+    border: none;
+    opacity: 0.8;
+}
+
+/*CSS for toast message container*/
+#wl-toast {
+    position: fixed;
+    top: var(--wl-toast-top);
+    left: 5px;
+    border: 1.5px solid var(--wl-color-black);
+    background: var(--wl-color-white);
+    color: var(--wl-color-black);
+    border-radius: 8px;
+    padding: 0;
+    display: none;
+    width: 400px;
+    height: auto;
+    z-index: 1000;
+}
+
+/*CSS for toast message close button container*/
+#wl-toast .toast--close-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/*CSS for toast message close button*/
+#toast-close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 1.3rem;
+}
+
+/*CSS for toast message close button on hover*/
+#toast-close:hover {
+    cursor: pointer;
+}
+
+/*CSS for toast message content*/
+.toast-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+/*CSS for toast message text*/
+#toast-text {
+    font-size: 1.4rem;
+}
+
+/*CSS for toast message product image*/
+#toast-image {
+    width: 80px;
+    height: 100%;
+    margin: 0 1em 0 0;
+    object-fit: cover;
+    border-radius: 7px 0 0 7px;
+    border-right: 1.5px solid var(--wl-background-secondary);
+}
+
+@media only screen and (max-width: 750px) {
+    /*CSS for toast message container for mobile screens and tablets*/
+    #wl-toast {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 0;
+        display: none;
+        width: 350px;
+    }
+}
+
